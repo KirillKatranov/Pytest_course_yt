@@ -2,6 +2,7 @@
 #Вызов конкретного теста с конкретным кейсом pytest tests/test_main.py::test_divide[1-2-0.5]
 from src.main import Calculator
 import pytest
+from contextlib 
 
 @pytest.mark.parametrize(
         "a, b, res",
