@@ -33,7 +33,7 @@ class CandiesRepository:
     def count(cls) -> int:
         query = select(func.count(Candies.id)).select_from(Candies)
         with Session() as session:
-            candies_count = session.execute(query)
+            candies_count = session.execute(query) 
             session.commit()
             return candies_count.scalar()
 
