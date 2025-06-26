@@ -40,7 +40,7 @@ def candies():
         CandySchema(title="candy2", state="eaten"),
         CandySchema(title="candy3", state="half"),
     ]
-    return candies #Возвращает данные. Поэтому она из-за автоюза отработает перед тестом, но данные никак не передаст. Нужно явно передавать возвращаемую фикестуру в тест-функцию
+    return candies #Возвращает данные. Поэтому она из-за автоюза отработает перед тестом, но данные никак не передаст. Нужно явно передавать возвращаемую фикстуру в тест-функцию
 
 #@pytest.mark.usefixtures("empty_candies") на классе заставит pytest вызывать фикстуру empty_candies перед каждым тестовым методом в этом классе, даже если у самой фикстуры autouse=False.
 @pytest.mark.usefixtures("empty_candies") 
